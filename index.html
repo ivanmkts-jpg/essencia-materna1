@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Essência Materna by Michelly Modos — Consultoria de Amamentação & Laserterapia Mamilar</title>
+  <meta name="description" content="Consultoria especializada em amamentação com laserterapia mamilar. Atendimento domiciliar, online e presencial. Cicatrize fissuras em até 5 dias." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    /* ===================== RESET & BASE ===================== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #FDF8F3;
+      color: #2D1B1E;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ===================== VARIABLES ===================== */
+    :root {
+      --rose:        #C96B7C;
+      --rose-dark:   #9E4D5F;
+      --rose-light:  #F5C6CE;
+      --rose-pale:   #FDF0F2;
+      --amber:       #D4956A;
+      --cream:       #FDF8F3;
+      --cream-2:     #F5EDE3;
+      --cream-3:     #EDD9C8;
+      --dark:        #2D1B1E;
+      --mid:         #6B4B52;
+      --light:       #9E7D83;
+      --white:       #FFFFFF;
+      --grad-rose:   linear-gradient(135deg, #C96B7C 0%, #9E4D5F 100%);
+      --grad-warm:   linear-gradient(135deg, #F5C6CE 0%, #F5EDE3 100%);
+      --grad-hero:   linear-gradient(135deg, #FDF8F3 0%, #FAF0E8 60%, #F5EDE3 100%);
+      --sh-soft:     0 8px 32px rgba(201,107,124,0.12);
+      --sh-med:      0 16px 48px rgba(201,107,124,0.20);
+      --sh-strong:   0 24px 64px rgba(45,27,30,0.22);
+      --r-sm: 12px; --r-md: 20px; --r-lg: 32px; --r-xl: 48px;
+    }
+
+    /* ===================== UTILS ===================== */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 28px; }
+    .tc { text-align: center; }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 14px 32px; border-radius: 100px;
+      font-family: 'Inter', sans-serif; font-weight: 600; font-size: 1rem;
+      text-decoration: none; transition: all .3s cubic-bezier(.4,0,.2,1);
+      cursor: pointer; border: none;
+    }
+    .btn-rose {
+      background: var(--grad-rose); color: #fff;
+      box-shadow: 0 8px 24px rgba(201,107,124,.45);
+    }
+    .btn-rose:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(201,107,124,.55); }
+    .btn-outline {
+      background: transparent; color: var(--rose);
+      border: 2px solid var(--rose);
+    }
+    .btn-outline:hover { background: var(--rose); color: #fff; transform: translateY(-3px); }
+    .btn-wa {
+      background: linear-gradient(135deg,#25D366,#128C7E); color: #fff;
+      box-shadow: 0 8px 24px rgba(37,211,102,.4);
+    }
+    .btn-wa:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(37,211,102,.55); }
+
+    .tag {
+      display: inline-block; padding: 6px 18px;
+      background: var(--rose-light); color: var(--rose-dark);
+      border-radius: 100px; font-size: .8rem; font-weight: 700;
+      letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 16px;
+    }
+    h1,h2,h3,h4 { font-family: 'Playfair Display', serif; line-height: 1.18; }
+    .sec-title { font-size: clamp(2rem,4vw,2.9rem); color: var(--dark); margin-bottom: 16px; }
+    .sec-sub { font-size: 1.05rem; color: var(--mid); max-width: 580px; margin: 0 auto 56px; line-height: 1.8; }
+
+    /* ===================== FADE ANIMATIONS ===================== */
+    .fi { opacity: 0; transform: translateY(36px); transition: opacity .75s ease, transform .75s ease; }
+    .fi.show { opacity: 1; transform: translateY(0); }
+    .fi-d1 { transition-delay: .1s; } .fi-d2 { transition-delay: .2s; }
+    .fi-d3 { transition-delay: .3s; } .fi-d4 { transition-delay: .4s; }
+    .fi-d5 { transition-delay: .5s; }
+
+    /* ===================== NAV ===================== */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      padding: 18px 0; transition: all .35s ease;
+    }
+    nav.on {
+      background: rgba(253,248,243,.96); backdrop-filter: blur(20px);
+      box-shadow: 0 4px 24px rgba(45,27,30,.07);
+      padding: 13px 0;
+    }
+    .nav-wrap { display: flex; align-items: center; justify-content: space-between; }
+    .logo { font-family:'Playfair Display',serif; font-weight: 700;
+            color: var(--rose-dark); text-decoration: none;
+            display:flex; flex-direction:column; line-height:1.1; }
+    .logo-main { font-size: 1.35rem; color: var(--rose-dark); }
+    .logo-by { font-size: .72rem; font-weight: 500; font-style: italic;
+               color: var(--amber); letter-spacing: .5px; }
+    .nav-links { display: flex; gap: 30px; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--mid); font-weight: 500; font-size: .93rem; transition: color .3s; }
+    .nav-links a:hover { color: var(--rose); }
+    .nav-right { display: flex; gap: 12px; align-items: center; }
+    .nav-burger { display: none; background: none; border: none; cursor: pointer; color: var(--rose-dark); font-size: 1.4rem; }
+
+    /* ===================== HERO ===================== */
+    .hero {
+      min-height: 100vh;
+      display: grid; grid-template-columns: 1fr 1fr;
+      align-items: center; padding-top: 80px;
+      background: var(--grad-hero);
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content:''; position: absolute; top:-120px; right:-80px;
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(201,107,124,.09) 0%, transparent 70%);
+      border-radius: 50%; pointer-events: none;
+    }
+    .hero::after {
+      content:''; position: absolute; bottom:-80px; left:0;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(212,149,106,.06) 0%, transparent 70%);
+      border-radius: 50%; pointer-events: none;
+    }
+    .hero-left {
+      padding: 60px 64px 60px 0;
+      position: relative; z-index: 1;
+    }
+    .hero-eyebrow { display: flex; align-items: center; gap: 14px; margin-bottom: 22px; }
+    .hero-eyebrow .line { width: 44px; height: 2px; background: var(--rose); }
+    .hero-eyebrow span { font-size: .8rem; font-weight: 700; color: var(--rose);
+                         text-transform: uppercase; letter-spacing: 2px; }
+    .hero-title { font-size: clamp(2.6rem,5.5vw,4rem); color: var(--dark);
+                  margin-bottom: 22px; line-height: 1.12; }
+    .hero-title em { color: var(--rose); font-style: italic; }
+    .hero-sub { font-size: 1.12rem; color: var(--mid); margin-bottom: 38px;
+                line-height: 1.85; max-width: 460px; }
+    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 48px; }
+    .hero-stats { display: flex; gap: 44px; }
+    .stat-num { font-family:'Playfair Display',serif; font-size: 2.2rem; font-weight: 700;
+                color: var(--rose); line-height: 1; }
+    .stat-lbl { font-size: .82rem; color: var(--light); margin-top: 4px; }
+
+    /* HERO PHOTO */
+    .hero-right {
+      position: relative; display: flex; justify-content: center; align-items: center;
+      padding: 60px 0 60px 20px;
+    }
+    .photo-wrap { position: relative; width: 460px; height: 540px; }
+    .photo-blob-bg {
+      position: absolute; inset: -16px;
+      background: linear-gradient(135deg, var(--rose-light) 0%, var(--cream-2) 55%, rgba(212,149,106,.35) 100%);
+      border-radius: 40% 60% 55% 45% / 45% 40% 60% 55%;
+      animation: morph 9s ease-in-out infinite;
+    }
+    .photo-blob {
+      position: absolute; inset: 0;
+      border-radius: 40% 60% 55% 45% / 45% 40% 60% 55%;
+      overflow: hidden;
+      animation: morph 9s ease-in-out infinite;
+      box-shadow: var(--sh-strong), 0 0 0 6px rgba(201,107,124,.1), 0 0 0 14px rgba(201,107,124,.05);
+    }
+    @keyframes morph {
+      0%,100% { border-radius: 40% 60% 55% 45% / 45% 40% 60% 55%; }
+      33%      { border-radius: 55% 45% 40% 60% / 60% 55% 45% 40%; }
+      66%      { border-radius: 45% 55% 60% 40% / 38% 60% 45% 57%; }
+    }
+    .photo-blob img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center top;
+      /* EFEITO FOTOGRÁFICO: warmth, micro-contrast, skin-glow */
+      filter: brightness(1.07) contrast(1.06) saturate(1.18) hue-rotate(-3deg);
+      transition: filter .5s ease;
+    }
+    .photo-blob::after {
+      content:''; position: absolute; inset: 0;
+      /* vignette sutil + warmth overlay */
+      background: radial-gradient(ellipse at center, transparent 55%, rgba(45,27,30,.10) 100%),
+                  linear-gradient(180deg, transparent 45%, rgba(158,77,95,.08) 100%);
+      pointer-events: none;
+    }
+    /* floating badges */
+    .pbadge {
+      position: absolute; background: #fff; border-radius: var(--r-md);
+      padding: 12px 18px; box-shadow: var(--sh-med);
+      display: flex; align-items: center; gap: 12px;
+      animation: float 4s ease-in-out infinite;
+    }
+    .pbadge-1 { bottom: 36px; left: -28px; animation-delay: 0s; }
+    .pbadge-2 { top: 56px; right: -28px; animation-delay: 2s; }
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+    .bi { width: 42px; height: 42px; border-radius: 50%; display:flex;
+          align-items:center; justify-content:center; font-size:1.1rem; }
+    .bi-rose { background: var(--rose-pale); color: var(--rose-dark); }
+    .bi-amber{ background: #FDE8D8; color: var(--amber); }
+    .bt { font-weight: 700; font-size: .95rem; color: var(--dark); }
+    .bs { font-size: .75rem; color: var(--light); }
+    /* decorative dots */
+    .pdots { position:absolute; top:16px; left:-44px;
+             display:grid; grid-template-columns:repeat(4,8px); gap:8px; }
+    .pdot { width:8px; height:8px; border-radius:50%; background:var(--rose-light); }
+    .pdot:nth-child(even){ background:var(--cream-2); }
+
+    /* ===================== TRUST BAR ===================== */
+    .trust-bar { background: var(--rose-dark); padding: 18px 0; }
+    .trust-inner { display:flex; justify-content:center; gap:52px; flex-wrap:wrap; }
+    .ti { display:flex; align-items:center; gap:9px; color:#fff; font-size:.88rem; font-weight:500; }
+    .ti i { color: var(--rose-light); }
+
+    /* ===================== SECTIONS ===================== */
+    section { padding: 96px 0; }
+
+    /* ===================== COMO FUNCIONA ===================== */
+    .sec-como { background: #fff; }
+    .steps-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; margin-top:56px; }
+    .step-card {
+      padding: 40px 30px 36px;
+      background: var(--cream); border-radius: var(--r-lg);
+      position: relative; transition: all .35s ease;
+      border: 1.5px solid transparent;
+    }
+    .step-card:hover { transform:translateY(-8px); box-shadow:var(--sh-med); border-color:var(--rose-light); }
+    .snum {
+      position:absolute; top:-20px; left:30px;
+      width:42px; height:42px; background:var(--grad-rose); color:#fff;
+      border-radius:50%; display:flex; align-items:center; justify-content:center;
+      font-weight:700; font-size:1rem; font-family:'Playfair Display',serif;
+      box-shadow:0 8px 20px rgba(201,107,124,.4);
+    }
+    .sico { font-size:2.4rem; margin:12px 0 18px; display:block; }
+    .stit { font-size:1.2rem; color:var(--dark); margin-bottom:10px; }
+    .sdsc { color:var(--mid); font-size:.92rem; line-height:1.75; }
+
+    /* ===================== PROBLEMAS ===================== */
+    .sec-prob { background: var(--cream); }
+    .prob-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:56px; }
+    .prob-card {
+      background:#fff; border-radius:var(--r-md); padding:28px 24px;
+      display:flex; align-items:flex-start; gap:18px;
+      transition:all .3s ease; border:1.5px solid transparent;
+    }
+    .prob-card:hover { border-color:var(--rose-light); box-shadow:var(--sh-soft); transform:translateY(-4px); }
+    .pico { width:50px; height:50px; min-width:50px; border-radius:var(--r-sm);
+            background:var(--grad-warm); display:flex; align-items:center; justify-content:center; font-size:1.35rem; }
+    .ptit { font-weight:600; font-size:.97rem; color:var(--dark); margin-bottom:5px; }
+    .pdsc { font-size:.85rem; color:var(--mid); line-height:1.65; }
+
+    /* ===================== LASER ===================== */
+    .sec-laser { background:#fff; }
+    .laser-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
+    .laser-bens { display:flex; flex-direction:column; gap:14px; margin-top:28px; }
+    .lb {
+      display:flex; align-items:center; gap:15px; padding:15px 18px;
+      background:var(--cream); border-radius:var(--r-sm); transition:background .3s;
+    }
+    .lb:hover { background:var(--cream-2); }
+    .lbck {
+      width:30px; height:30px; min-width:30px; background:var(--grad-rose); border-radius:50%;
+      display:flex; align-items:center; justify-content:center; color:#fff; font-size:.8rem;
+    }
+    /* laser visual card */
+    .laser-visual { position:relative; }
+    .laser-photo-wrap {
+      position:relative; border-radius:var(--r-xl);
+      overflow:hidden; height:520px;
+      /* borda rose suave para integrar o fundo branco da foto */
+      background: #fff;
+      box-shadow: var(--sh-strong),
+                  0 0 0 8px rgba(201,107,124,.10),
+                  0 0 0 18px rgba(201,107,124,.05);
+    }
+    .laser-photo-wrap img {
+      width:100%; height:100%;
+      object-fit:contain;          /* preserve fundo branco da foto */
+      object-position:center center;
+      filter: brightness(1.02) contrast(1.04) saturate(1.08);
+      transition: transform .6s ease;
+    }
+    .laser-photo-wrap:hover img { transform: scale(1.03); }
+    /* gradiente rose na base para integrar com o layout */
+    .laser-photo-wrap::after {
+      content:''; position:absolute; inset:0; pointer-events:none;
+      background: linear-gradient(180deg, transparent 70%, rgba(245,198,206,.18) 100%);
+    }
+    .laser-stat {
+      position:absolute; background:#fff; border-radius:var(--r-md);
+      padding:18px 22px; box-shadow:var(--sh-med); z-index:2;
+    }
+    .ls1 { bottom:36px; left:-24px; }
+    .ls2 { top:36px; right:-24px; }
+    .lsn { font-family:'Playfair Display',serif; font-size:2rem; font-weight:700; color:var(--rose); }
+    .lsl { font-size:.82rem; color:var(--light); }
+
+    /* ===================== SOBRE ===================== */
+    .sec-sobre { background:var(--cream); }
+    .sobre-grid { display:grid; grid-template-columns:1fr 1.1fr; gap:80px; align-items:start; }
+    .sobre-photo-wrap { position:relative; }
+    .sobre-photo {
+      width:100%; aspect-ratio:4/5; object-fit:cover; object-position:center top;
+      border-radius:var(--r-xl);
+      /* Edição CSS profissional da foto */
+      filter: brightness(1.06) contrast(1.07) saturate(1.16) hue-rotate(-2deg);
+      box-shadow: var(--sh-strong);
+    }
+    .sobre-accent {
+      position:absolute; bottom:-18px; right:-18px;
+      width:130px; height:130px;
+      background:var(--grad-rose); border-radius:var(--r-md); z-index:-1;
+    }
+    .sobre-tag {
+      position:absolute; bottom:28px; left:-22px;
+      background:#fff; border-radius:var(--r-md); padding:14px 18px;
+      box-shadow:var(--sh-med); display:flex; align-items:center; gap:12px;
+    }
+    .cred-list { list-style:none; display:flex; flex-direction:column; gap:11px; margin-top:22px; }
+    .cred-item { display:flex; align-items:center; gap:11px; font-size:.92rem; color:var(--mid); }
+    .cred-item i { color:var(--rose); width:16px; }
+    .sobre-quote {
+      margin-top:28px; padding:22px 28px;
+      background:#fff; border-left:4px solid var(--rose);
+      border-radius:0 var(--r-sm) var(--r-sm) 0;
+      font-style:italic; color:var(--mid); line-height:1.8; font-size:.95rem;
+    }
+
+    /* ===================== VALORES ===================== */
+    .sec-vals { background:#fff; }
+    .price-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:22px; margin-top:56px; }
+    .pc {
+      background:var(--cream); border-radius:var(--r-lg);
+      padding:34px 24px; text-align:center;
+      position:relative; transition:all .35s ease;
+      border:2px solid transparent;
+    }
+    .pc:hover { transform:translateY(-8px); box-shadow:var(--sh-med); border-color:var(--rose-light); }
+    .pc.hot { background:var(--grad-rose); color:#fff; transform:scale(1.03); border-color:transparent; }
+    .pc.hot:hover { transform:scale(1.03) translateY(-8px); box-shadow:0 24px 64px rgba(201,107,124,.42); }
+    .hot-badge {
+      position:absolute; top:-14px; left:50%; transform:translateX(-50%);
+      background:var(--amber); color:#fff;
+      font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:1px;
+      padding:6px 16px; border-radius:100px; white-space:nowrap;
+    }
+    .pc-ico { font-size:2.4rem; margin-bottom:14px; }
+    .pc-name { font-family:'Playfair Display',serif; font-size:1.15rem; margin-bottom:8px; color:var(--dark); }
+    .pc.hot .pc-name { color:#fff; }
+    .pc-desc { font-size:.83rem; color:var(--light); margin-bottom:22px; line-height:1.6; }
+    .pc.hot .pc-desc { color:rgba(255,255,255,.8); }
+    .pc-from { font-size:.75rem; color:var(--light); display:block; }
+    .pc.hot .pc-from { color:rgba(255,255,255,.7); }
+    .pc-val { font-family:'Playfair Display',serif; font-size:2.6rem; font-weight:700;
+              color:var(--dark); line-height:1; margin:4px 0 22px; }
+    .pc.hot .pc-val { color:#fff; }
+    .pc-val sup { font-size:1.1rem; vertical-align:super; }
+    .pc-feats { list-style:none; text-align:left; margin-bottom:28px; display:flex; flex-direction:column; gap:7px; }
+    .pc-feats li { font-size:.85rem; color:var(--mid); display:flex; align-items:center; gap:8px; }
+    .pc.hot .pc-feats li { color:rgba(255,255,255,.92); }
+    .pc-feats li i { color:var(--rose); font-size:.7rem; }
+    .pc.hot .pc-feats li i { color:rgba(255,255,255,.85); }
+    .pc-cta {
+      width:100%; padding:13px; border-radius:100px;
+      font-weight:600; font-size:.92rem; cursor:pointer;
+      transition:all .3s; text-decoration:none; display:block; text-align:center; font-family:'Inter',sans-serif;
+    }
+    .pc-cta-out { background:transparent; border:2px solid var(--rose); color:var(--rose); }
+    .pc-cta-out:hover { background:var(--rose); color:#fff; }
+    .pc-cta-wh { background:#fff; border:none; color:var(--rose-dark); }
+    .pc-cta-wh:hover { background:var(--cream); }
+
+    /* ===================== DEPOIMENTOS ===================== */
+    .sec-dep { background:var(--cream); }
+    .dep-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:26px; margin-top:56px; }
+    .dep-card {
+      background:#fff; border-radius:var(--r-lg); padding:30px;
+      position:relative; transition:all .35s ease;
+    }
+    .dep-card:hover { transform:translateY(-6px); box-shadow:var(--sh-med); }
+    .dep-tag {
+      position:absolute; top:20px; right:20px;
+      background:var(--rose-pale); color:var(--rose-dark);
+      font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.5px;
+      padding:4px 10px; border-radius:100px;
+    }
+    .dep-q { font-size:3rem; color:var(--rose-light); font-family:'Playfair Display',serif; line-height:1; margin-bottom:6px; }
+    .dep-stars { color:#F59E0B; font-size:.88rem; margin-bottom:14px; }
+    .dep-txt { color:var(--mid); line-height:1.8; font-size:.93rem; font-style:italic; margin-bottom:22px; }
+    .dep-auth { display:flex; align-items:center; gap:13px; }
+    .dep-av {
+      width:46px; height:46px; border-radius:50%;
+      background:var(--grad-warm); display:flex; align-items:center; justify-content:center;
+      font-family:'Playfair Display',serif; font-weight:700; font-size:1.2rem; color:var(--rose-dark);
+    }
+    .dep-name { font-weight:600; font-size:.93rem; color:var(--dark); }
+    .dep-det { font-size:.78rem; color:var(--light); }
+
+    /* ===================== CONTATO ===================== */
+    .sec-ctt { background:#fff; }
+    .ctt-grid { display:grid; grid-template-columns:1fr 1.4fr; gap:80px; align-items:start; }
+    .ctt-left p { color:var(--mid); line-height:1.8; margin-bottom:36px; }
+    .ctt-items { display:flex; flex-direction:column; gap:18px; }
+    .ctt-item { display:flex; align-items:center; gap:15px; }
+    .ctt-ico {
+      width:46px; height:46px; border-radius:var(--r-sm);
+      background:var(--grad-warm); display:flex; align-items:center; justify-content:center;
+      color:var(--rose-dark); font-size:1.05rem;
+    }
+    .ctt-tit { font-weight:600; font-size:.88rem; color:var(--dark); }
+    .ctt-val { font-size:.88rem; color:var(--mid); }
+    .form-card { background:var(--cream); border-radius:var(--r-xl); padding:44px; }
+    .form-ttl { font-size:1.55rem; margin-bottom:7px; }
+    .form-sub { color:var(--mid); font-size:.88rem; margin-bottom:28px; }
+    .form-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    .fg { display:flex; flex-direction:column; gap:5px; }
+    .fg.full { grid-column:1/-1; }
+    .fl { font-size:.83rem; font-weight:600; color:var(--dark); }
+    input, select, textarea {
+      padding:13px 15px; border:2px solid var(--cream-2); border-radius:var(--r-sm);
+      font-family:'Inter',sans-serif; font-size:.93rem; color:var(--dark);
+      background:#fff; transition:border-color .3s; outline:none; width:100%;
+    }
+    input:focus, select:focus, textarea:focus { border-color:var(--rose); }
+    textarea { resize:vertical; min-height:110px; }
+    .form-btn {
+      width:100%; padding:15px; background:var(--grad-rose); color:#fff;
+      border:none; border-radius:100px; font-family:'Inter',sans-serif;
+      font-weight:600; font-size:.97rem; cursor:pointer; transition:all .3s;
+      margin-top:6px; display:flex; align-items:center; justify-content:center; gap:10px;
+    }
+    .form-btn:hover { transform:translateY(-2px); box-shadow:0 12px 32px rgba(201,107,124,.45); }
+
+    /* ===================== FOOTER ===================== */
+    footer { background:var(--dark); color:rgba(255,255,255,.65); padding:60px 0 28px; }
+    .ft-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:44px; margin-bottom:44px; }
+    .ft-logo { font-family:'Playfair Display',serif; font-weight:700;
+               color:#fff; margin-bottom:10px; line-height:1.2; }
+    .ft-logo-main { font-size:1.4rem; display:block; }
+    .ft-logo-by { font-size:.78rem; font-style:italic; font-weight:400;
+                  color:var(--rose-light); letter-spacing:.5px; }
+    .ft-desc { font-size:.88rem; line-height:1.75; margin-bottom:22px; }
+    .ft-soc { display:flex; gap:10px; }
+    .ft-si {
+      width:38px; height:38px; border-radius:50%;
+      background:rgba(255,255,255,.1); display:flex; align-items:center; justify-content:center;
+      color:#fff; text-decoration:none; transition:background .3s; font-size:.9rem;
+    }
+    .ft-si:hover { background:var(--rose); }
+    .ft-ht { font-weight:700; font-size:.83rem; text-transform:uppercase; letter-spacing:1px;
+             color:#fff; margin-bottom:18px; }
+    .ft-links { list-style:none; display:flex; flex-direction:column; gap:9px; }
+    .ft-links a { text-decoration:none; color:rgba(255,255,255,.58); font-size:.88rem; transition:color .3s; }
+    .ft-links a:hover { color:var(--rose-light); }
+    .ft-bot {
+      border-top:1px solid rgba(255,255,255,.1); padding-top:22px;
+      display:flex; justify-content:space-between; align-items:center; font-size:.83rem;
+    }
+
+    /* ===================== WHATSAPP FLOAT ===================== */
+    .wa-float {
+      position:fixed; bottom:30px; right:30px;
+      width:58px; height:58px; border-radius:50%;
+      background:linear-gradient(135deg,#25D366,#128C7E);
+      display:flex; align-items:center; justify-content:center;
+      color:#fff; font-size:1.75rem; text-decoration:none;
+      box-shadow:0 8px 24px rgba(37,211,102,.5); z-index:999;
+      transition:all .3s; animation:wapulse 2.5s infinite;
+    }
+    .wa-float:hover { transform:scale(1.15); }
+    @keyframes wapulse {
+      0%,100% { box-shadow:0 8px 24px rgba(37,211,102,.5); }
+      50% { box-shadow:0 8px 40px rgba(37,211,102,.75), 0 0 0 10px rgba(37,211,102,.12); }
+    }
+
+    /* ===================== RESPONSIVE ===================== */
+    @media(max-width:1080px){
+      .hero{ grid-template-columns:1fr; }
+      .hero-left{ padding:50px 0 20px; }
+      .hero-right{ padding:0 0 60px; }
+      .photo-wrap{ width:360px; height:420px; }
+      .pbadge-1{ left:0; } .pbadge-2{ right:0; }
+      .price-grid{ grid-template-columns:repeat(2,1fr); }
+      .ft-grid{ grid-template-columns:1fr 1fr; }
+    }
+    @media(max-width:768px){
+      section{ padding:68px 0; }
+      .nav-links,.nav-right{ display:none; }
+      .nav-burger{ display:block; }
+      .steps-grid,.prob-grid,.dep-grid{ grid-template-columns:1fr; }
+      .laser-grid,.sobre-grid,.ctt-grid{ grid-template-columns:1fr; }
+      .price-grid{ grid-template-columns:1fr; }
+      .pc.hot{ transform:scale(1); }
+      .form-grid{ grid-template-columns:1fr; }
+      .hero-stats{ gap:24px; }
+      .trust-inner{ gap:22px; }
+      .ft-grid{ grid-template-columns:1fr; gap:28px; }
+      .ft-bot{ flex-direction:column; gap:10px; text-align:center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== NAV ==================== -->
+  <nav id="nav">
+    <div class="container nav-wrap">
+      <a href="#inicio" class="logo">
+        <span class="logo-main">Essência Materna</span>
+        <span class="logo-by">by Michelly Modos</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#como-funciona">Como Funciona</a></li>
+        <li><a href="#tratamentos">Tratamentos</a></li>
+        <li><a href="#laser">Laserterapia</a></li>
+        <li><a href="#sobre">Consultora</a></li>
+        <li><a href="#valores">Valores</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="#contato" class="btn btn-outline" style="padding:10px 22px;font-size:.88rem;">Agendar</a>
+        <a href="https://wa.me/5500000000000" class="btn btn-wa" style="padding:10px 22px;font-size:.88rem;">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+      <button class="nav-burger" onclick="toggleNav()"><i class="fas fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero" id="inicio">
+    <div class="hero-left" style="padding-left:max(28px, calc((100vw - 1200px)/2 + 28px));">
+      <div class="hero-eyebrow"><div class="line"></div><span>Consultoria Especializada · IBCLC</span></div>
+      <h1 class="hero-title">
+        Amamentar com<br/>
+        <em>amor e sem dor</em><br/>
+        é possível
+      </h1>
+      <p class="hero-sub">
+        Consultoria personalizada de amamentação com laserterapia mamilar. Cicatrização de fissuras em até 5 dias. Atendimento domiciliar, online e presencial.
+      </p>
+      <div class="hero-btns">
+        <a href="#contato" class="btn btn-rose"><i class="fas fa-calendar-check"></i> Agendar Consulta</a>
+        <a href="https://wa.me/5500000000000" class="btn btn-wa"><i class="fab fa-whatsapp"></i> Falar no WhatsApp</a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="stat-num">+500</div><div class="stat-lbl">Mães atendidas</div></div>
+        <div><div class="stat-num">98%</div><div class="stat-lbl">Satisfação</div></div>
+        <div><div class="stat-num">5 ★</div><div class="stat-lbl">Avaliação média</div></div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="photo-wrap">
+        <!-- Decorative dots -->
+        <div class="pdots">
+          <div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div>
+          <div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div>
+          <div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div>
+          <div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div>
+        </div>
+        <!-- blob background -->
+        <div class="photo-blob-bg"></div>
+        <!-- photo frame with CSS editing -->
+        <div class="photo-blob">
+          <img src="assets/consultora.jpg" alt="Consultora de Amamentação — IBCLC" />
+        </div>
+        <!-- floating badges -->
+        <div class="pbadge pbadge-1">
+          <div class="bi bi-rose"><i class="fas fa-certificate"></i></div>
+          <div><div class="bt">IBCLC Certificada</div><div class="bs">Certificação Internacional</div></div>
+        </div>
+        <div class="pbadge pbadge-2">
+          <div class="bi bi-amber"><i class="fas fa-bolt"></i></div>
+          <div><div class="bt">Laserterapia</div><div class="bs">Cicatrização em até 5 dias</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TRUST BAR ==================== -->
+  <div class="trust-bar">
+    <div class="container trust-inner">
+      <div class="ti"><i class="fas fa-home"></i> Atendimento Domiciliar</div>
+      <div class="ti"><i class="fas fa-video"></i> Consulta Online</div>
+      <div class="ti"><i class="fas fa-bolt"></i> Laserterapia Mamilar</div>
+      <div class="ti"><i class="fab fa-whatsapp"></i> Suporte via WhatsApp</div>
+      <div class="ti"><i class="fas fa-shield-alt"></i> Profissional Certificada IBCLC</div>
+    </div>
+  </div>
+
+  <!-- ==================== COMO FUNCIONA ==================== -->
+  <section class="sec-como" id="como-funciona">
+    <div class="container">
+      <div class="tc fi">
+        <div class="tag">Como Funciona</div>
+        <h2 class="sec-title">Do primeiro contato ao<br/>sucesso na amamentação</h2>
+        <p class="sec-sub">Um processo humanizado, personalizado e 100% baseado em evidências científicas.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card fi fi-d1">
+          <div class="snum">1</div>
+          <span class="sico">📞</span>
+          <h3 class="stit">Primeiro Contato</h3>
+          <p class="sdsc">Entre em contato via WhatsApp ou formulário. Fazemos uma triagem rápida para entender sua situação e indicar a melhor modalidade de atendimento.</p>
+        </div>
+        <div class="step-card fi fi-d2">
+          <div class="snum">2</div>
+          <span class="sico">🔍</span>
+          <h3 class="stit">Avaliação Completa</h3>
+          <p class="sdsc">Na consulta, avaliamos a pega do bebê, anatomia do mamilo, produção de leite e identificamos todos os fatores que dificultam a amamentação.</p>
+        </div>
+        <div class="step-card fi fi-d3">
+          <div class="snum">3</div>
+          <span class="sico">💡</span>
+          <h3 class="stit">Plano Personalizado</h3>
+          <p class="sdsc">Desenvolvemos um plano de ação específico para você e seu bebê, com orientações práticas, técnicas de pega correta e, se necessário, laserterapia mamilar.</p>
+        </div>
+        <div class="step-card fi fi-d1">
+          <div class="snum">4</div>
+          <span class="sico">⚡</span>
+          <h3 class="stit">Laserterapia (se indicado)</h3>
+          <p class="sdsc">Aplicação indolor do laser de baixa intensidade sobre as fissuras. Resultados visíveis em 24–72h, cicatrização completa em até 5 dias.</p>
+        </div>
+        <div class="step-card fi fi-d2">
+          <div class="snum">5</div>
+          <span class="sico">📱</span>
+          <h3 class="stit">Suporte Contínuo</h3>
+          <p class="sdsc">Acompanhamento por WhatsApp nas 48–72h após a consulta. Você nunca ficará sozinha durante o processo — estamos sempre disponíveis.</p>
+        </div>
+        <div class="step-card fi fi-d3">
+          <div class="snum">6</div>
+          <span class="sico">🤱</span>
+          <h3 class="stit">Amamentação Plena</h3>
+          <p class="sdsc">Com as ferramentas certas, você e seu bebê alcançam uma amamentação confortável, prazerosa e pelo tempo que desejarem.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PROBLEMAS ==================== -->
+  <section class="sec-prob" id="tratamentos">
+    <div class="container">
+      <div class="tc fi">
+        <div class="tag">Especialidades</div>
+        <h2 class="sec-title">O que podemos resolver juntas</h2>
+        <p class="sec-sub">Problemas comuns que fazem mães desistirem — mas que têm solução com apoio especializado.</p>
+      </div>
+      <div class="prob-grid">
+        <div class="prob-card fi fi-d1"><div class="pico">🔴</div><div><div class="ptit">Fissuras Mamilares</div><div class="pdsc">Rachaduras profundas com dor e sangramento. Tratadas com laserterapia em 3–5 dias.</div></div></div>
+        <div class="prob-card fi fi-d2"><div class="pico">😢</div><div><div class="ptit">Pega Incorreta</div><div class="pdsc">Principal causa de dor e lesão. Corrigida com técnicas práticas durante a consulta.</div></div></div>
+        <div class="prob-card fi fi-d3"><div class="pico">🌡️</div><div><div class="ptit">Mastite</div><div class="pdsc">Inflamação da mama com dor, vermelhidão e febre. Manejo correto para evitar abscesso.</div></div></div>
+        <div class="prob-card fi fi-d1"><div class="pico">🥛</div><div><div class="ptit">Ingurgitamento</div><div class="pdsc">"Leite empedrado" — mama tensa e difícil de drenar. Técnicas de ordenha e alívio imediato.</div></div></div>
+        <div class="prob-card fi fi-d2"><div class="pico">📉</div><div><div class="ptit">Baixa Produção de Leite</div><div class="pdsc">Avaliamos se é real ou percebida e criamos estratégias para aumentar a produção.</div></div></div>
+        <div class="prob-card fi fi-d3"><div class="pico">👶</div><div><div class="ptit">Dificuldade de Sucção</div><div class="pdsc">Frênulo curto, prematuridade, palato ogival. Avaliação completa e encaminhamento.</div></div></div>
+        <div class="prob-card fi fi-d1"><div class="pico">💼</div><div><div class="ptit">Retorno ao Trabalho</div><div class="pdsc">Planejamento de ordenha, armazenamento e rotina para manter a amamentação.</div></div></div>
+        <div class="prob-card fi fi-d2"><div class="pico">🤰</div><div><div class="ptit">Consultoria Pré-Natal</div><div class="pdsc">Prepare-se ainda na gestação. É muito mais fácil prevenir do que remediar.</div></div></div>
+        <div class="prob-card fi fi-d3"><div class="pico">🍼</div><div><div class="ptit">Desmame Gradual</div><div class="pdsc">Quando chegar a hora, orientamos o processo respeitando o ritmo da mãe e do bebê.</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== LASER ==================== -->
+  <section class="sec-laser" id="laser">
+    <div class="container">
+      <div class="laser-grid">
+        <div class="fi">
+          <div class="tag">Laserterapia Mamilar</div>
+          <h2 class="sec-title">Cicatrização acelerada com tecnologia laser</h2>
+          <p style="color:var(--mid);line-height:1.8;margin-bottom:8px;">
+            A <strong>fotobiomodulação (laser de baixa intensidade)</strong> é uma tecnologia não invasiva, indolor e segura durante a amamentação — respaldada por estudos publicados em revistas científicas nacionais e internacionais.
+          </p>
+          <p style="color:var(--mid);line-height:1.8;">
+            A aplicação dura de 5 a 15 minutos e os resultados começam em 24–72h, com cicatrização completa em até 5 dias na maioria dos casos.
+          </p>
+          <div class="laser-bens">
+            <div class="lb"><div class="lbck"><i class="fas fa-check"></i></div><span>Redução de até 4 pontos na escala de dor em 24h</span></div>
+            <div class="lb"><div class="lbck"><i class="fas fa-check"></i></div><span>Taxa de cicatrização de 75–80% em poucas sessões</span></div>
+            <div class="lb"><div class="lbck"><i class="fas fa-check"></i></div><span>Estimula produção de colágeno tipo III e regeneração tecidual</span></div>
+            <div class="lb"><div class="lbck"><i class="fas fa-check"></i></div><span>Totalmente seguro para o bebê e para o leite materno</span></div>
+            <div class="lb"><div class="lbck"><i class="fas fa-check"></i></div><span>Sem contraindicações para a amamentação</span></div>
+            <div class="lb"><div class="lbck"><i class="fas fa-check"></i></div><span>Previne o desmame precoce por dor ou lesão mamilar</span></div>
+          </div>
+        </div>
+        <div class="laser-visual fi fi-d2">
+          <div class="laser-photo-wrap">
+            <img src="assets/laser.jpg" alt="Mãe amamentando seu bebê com carinho" />
+          </div>
+          <div class="laser-stat ls1"><div class="lsn">5 dias</div><div class="lsl">Cicatrização média</div></div>
+          <div class="laser-stat ls2"><div class="lsn">3–6</div><div class="lsl">Sessões em média</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SOBRE ==================== -->
+  <section class="sec-sobre" id="sobre">
+    <div class="container">
+      <div class="sobre-grid">
+        <div class="sobre-photo-wrap fi">
+          <img src="assets/consultora.jpg" alt="Consultora de Amamentação" class="sobre-photo" />
+          <div class="sobre-accent"></div>
+          <div class="sobre-tag">
+            <div class="bi bi-rose" style="width:40px;height:40px;font-size:.95rem;"><i class="fas fa-heart"></i></div>
+            <div><div class="bt">+500 famílias</div><div class="bs">atendidas com sucesso</div></div>
+          </div>
+        </div>
+        <div class="fi fi-d2">
+          <div class="tag">Sobre a Consultora</div>
+          <h2 class="sec-title">Michelly Modos</h2>
+          <p style="color:var(--mid);line-height:1.8;margin-bottom:14px;">
+            Consultora de Lactação com certificação internacional <strong>IBCLC</strong>, especializada em laserterapia mamilar e atendimento humanizado em todas as fases da amamentação.
+          </p>
+          <p style="color:var(--mid);line-height:1.8;">
+            Acredito que toda mãe que deseja amamentar merece suporte qualificado, acolhedor e baseado em evidências. Minha missão é transformar uma experiência dolorosa em uma jornada de vínculo e amor.
+          </p>
+          <ul class="cred-list">
+            <li class="cred-item"><i class="fas fa-graduation-cap"></i> Graduação em [Curso] — [Universidade]</li>
+            <li class="cred-item"><i class="fas fa-certificate"></i> Certificação IBCLC — International Board Certified Lactation Consultant</li>
+            <li class="cred-item"><i class="fas fa-bolt"></i> Especialização em Laserterapia e Fotobiomodulação</li>
+            <li class="cred-item"><i class="fas fa-book"></i> Formação em Amamentação — Liga Aleitamento Brasil</li>
+            <li class="cred-item"><i class="fas fa-clock"></i> +1.000 horas de prática clínica em lactação</li>
+          </ul>
+          <blockquote class="sobre-quote">
+            "Nenhuma mãe deveria desistir de amamentar por falta de informação ou apoio. Estou aqui para que você e seu bebê vivam essa experiência da forma mais bonita e segura possível."
+          </blockquote>
+          <div style="margin-top:28px;">
+            <a href="#contato" class="btn btn-rose"><i class="fas fa-calendar-check"></i> Agendar com ela</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== VALORES ==================== -->
+  <section class="sec-vals" id="valores">
+    <div class="container">
+      <div class="tc fi">
+        <div class="tag">Investimento</div>
+        <h2 class="sec-title">Escolha o atendimento ideal para você</h2>
+        <p class="sec-sub">Serviço premium com profissional certificada. Investimento que transforma a experiência da amamentação.</p>
+      </div>
+      <div class="price-grid">
+
+        <div class="pc fi fi-d1">
+          <div class="pc-ico">💻</div>
+          <div class="pc-name">Consulta Online</div>
+          <p class="pc-desc">Via videochamada. Ideal para orientações, dúvidas e acompanhamento.</p>
+          <span class="pc-from">a partir de</span>
+          <div class="pc-val"><sup>R$</sup> 280</div>
+          <ul class="pc-feats">
+            <li><i class="fas fa-check-circle"></i> 1h30 de atendimento</li>
+            <li><i class="fas fa-check-circle"></i> Avaliação completa online</li>
+            <li><i class="fas fa-check-circle"></i> Plano personalizado em PDF</li>
+            <li><i class="fas fa-check-circle"></i> Suporte WhatsApp por 48h</li>
+          </ul>
+          <a href="#contato" class="pc-cta pc-cta-out">Agendar Online</a>
+        </div>
+
+        <div class="pc fi fi-d2">
+          <div class="pc-ico">🏠</div>
+          <div class="pc-name">Atendimento Domiciliar</div>
+          <p class="pc-desc">Na sua casa, no conforto e privacidade do seu lar.</p>
+          <span class="pc-from">a partir de</span>
+          <div class="pc-val"><sup>R$</sup> 450</div>
+          <ul class="pc-feats">
+            <li><i class="fas fa-check-circle"></i> 2h de atendimento presencial</li>
+            <li><i class="fas fa-check-circle"></i> Avaliação mama + bebê</li>
+            <li><i class="fas fa-check-circle"></i> Correção de pega ao vivo</li>
+            <li><i class="fas fa-check-circle"></i> Suporte WhatsApp por 72h</li>
+          </ul>
+          <a href="#contato" class="pc-cta pc-cta-out">Agendar Visita</a>
+        </div>
+
+        <div class="pc hot fi fi-d3">
+          <div class="hot-badge">⭐ Mais Solicitado</div>
+          <div class="pc-ico">⚡</div>
+          <div class="pc-name">Domiciliar + Laser</div>
+          <p class="pc-desc">Atendimento completo com laserterapia mamilar inclusa.</p>
+          <span class="pc-from">a partir de</span>
+          <div class="pc-val"><sup>R$</sup> 590</div>
+          <ul class="pc-feats">
+            <li><i class="fas fa-check-circle"></i> 2h30 de atendimento completo</li>
+            <li><i class="fas fa-check-circle"></i> Laserterapia mamilar inclusa</li>
+            <li><i class="fas fa-check-circle"></i> Registro fotográfico da evolução</li>
+            <li><i class="fas fa-check-circle"></i> Protocolo de cuidados em PDF</li>
+            <li><i class="fas fa-check-circle"></i> Suporte WhatsApp por 72h</li>
+          </ul>
+          <a href="#contato" class="pc-cta pc-cta-wh">Agendar Agora</a>
+        </div>
+
+        <div class="pc fi fi-d4">
+          <div class="pc-ico">🏆</div>
+          <div class="pc-name">Pacote Ouro</div>
+          <p class="pc-desc">Acompanhamento completo por 30 dias com 3 visitas + laser.</p>
+          <span class="pc-from">pacote completo</span>
+          <div class="pc-val"><sup>R$</sup> 1.490</div>
+          <ul class="pc-feats">
+            <li><i class="fas fa-check-circle"></i> 3 atendimentos domiciliares</li>
+            <li><i class="fas fa-check-circle"></i> Laserterapia em todas as sessões</li>
+            <li><i class="fas fa-check-circle"></i> Suporte WhatsApp por 30 dias</li>
+            <li><i class="fas fa-check-circle"></i> 1 retorno online incluso</li>
+            <li><i class="fas fa-check-circle"></i> Prioridade de agendamento</li>
+          </ul>
+          <a href="#contato" class="pc-cta pc-cta-out">Contratar Pacote</a>
+        </div>
+
+      </div>
+      <p class="tc" style="margin-top:28px;color:var(--light);font-size:.85rem;">
+        * Valores podem variar por região e disponibilidade. Consulte disponibilidade para sua área.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== DEPOIMENTOS ==================== -->
+  <section class="sec-dep" id="depoimentos">
+    <div class="container">
+      <div class="tc fi">
+        <div class="tag">Depoimentos</div>
+        <h2 class="sec-title">O que dizem as mamães</h2>
+        <p class="sec-sub">Histórias reais de mães que transformaram sua experiência de amamentar.</p>
+      </div>
+      <div class="dep-grid">
+
+        <div class="dep-card fi fi-d1">
+          <div class="dep-tag">Fissura + Laser</div>
+          <div class="dep-q">"</div>
+          <div class="dep-stars">★★★★★</div>
+          <p class="dep-txt">Depois de 5 dias com fissuras tão profundas que eu chorava a cada mamada, pensei em desistir. Fiz 2 sessões de laserterapia e no 3º dia a diferença já era enorme. No 5º dia, as fissuras estavam completamente cicatrizadas. Foi transformador!</p>
+          <div class="dep-auth">
+            <div class="dep-av">A</div>
+            <div><div class="dep-name">Ana Paula M.</div><div class="dep-det">28 anos · Bebê de 12 dias</div></div>
+          </div>
+        </div>
+
+        <div class="dep-card fi fi-d2">
+          <div class="dep-tag">Pega + Frênulo</div>
+          <div class="dep-q">"</div>
+          <div class="dep-stars">★★★★★</div>
+          <p class="dep-txt">Meu bebê tinha dificuldade de pega desde o nascimento. Depois da consultoria descobrimos que era frênulo curto. A orientação foi precisa, o encaminhamento rápido e o suporte incrível. Ainda estamos amamentando com 8 meses!</p>
+          <div class="dep-auth">
+            <div class="dep-av">F</div>
+            <div><div class="dep-name">Fernanda R.</div><div class="dep-det">32 anos · Bebê de 8 meses</div></div>
+          </div>
+        </div>
+
+        <div class="dep-card fi fi-d3">
+          <div class="dep-tag">Mastite</div>
+          <div class="dep-q">"</div>
+          <div class="dep-stars">★★★★★</div>
+          <p class="dep-txt">Desenvolvi mastite na segunda semana pós-parto e estava desesperada. O atendimento domiciliar foi um alívio enorme — não precisei sair de casa doente com meu bebê. A laserterapia ajudou muito na dor e inflamação. Recomendo de olhos fechados!</p>
+          <div class="dep-auth">
+            <div class="dep-av">J</div>
+            <div><div class="dep-name">Juliana S.</div><div class="dep-det">25 anos · Bebê de 3 semanas</div></div>
+          </div>
+        </div>
+
+        <div class="dep-card fi fi-d1">
+          <div class="dep-tag">Retorno ao Trabalho</div>
+          <div class="dep-q">"</div>
+          <div class="dep-stars">★★★★★</div>
+          <p class="dep-txt">Estava com medo de não manter a amamentação ao voltar ao trabalho. A consultoria me ensinou a organizar ordenha e armazenamento do leite. Com 14 meses ainda estou amamentando minha filha! Não teria conseguido sem esse suporte.</p>
+          <div class="dep-auth">
+            <div class="dep-av">M</div>
+            <div><div class="dep-name">Mariana L.</div><div class="dep-det">35 anos · Bebê de 14 meses</div></div>
+          </div>
+        </div>
+
+        <div class="dep-card fi fi-d2">
+          <div class="dep-tag">Baixa Produção</div>
+          <div class="dep-q">"</div>
+          <div class="dep-stars">★★★★★</div>
+          <p class="dep-txt">Achei que não tinha leite suficiente e já suplementava com fórmula. A consultora me mostrou que era uma questão de técnica e frequência. Em uma semana minha produção aumentou e pudemos retirar completamente a fórmula!</p>
+          <div class="dep-auth">
+            <div class="dep-av">S</div>
+            <div><div class="dep-name">Sabrina T.</div><div class="dep-det">30 anos · Bebê de 6 semanas</div></div>
+          </div>
+        </div>
+
+        <div class="dep-card fi fi-d3">
+          <div class="dep-tag">Pacote Ouro</div>
+          <div class="dep-q">"</div>
+          <div class="dep-stars">★★★★★</div>
+          <p class="dep-txt">Fiz o Pacote Ouro e foi o melhor investimento do pós-parto. Três visitas em casa, laser em todas, e suporte pelo WhatsApp sempre que precisei. A amamentação que antes era pesadelo virou o momento mais bonito do meu dia.</p>
+          <div class="dep-auth">
+            <div class="dep-av">C</div>
+            <div><div class="dep-name">Carolina B.</div><div class="dep-det">29 anos · Bebê de 2 meses</div></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTATO ==================== -->
+  <section class="sec-ctt" id="contato">
+    <div class="container">
+      <div class="ctt-grid">
+        <div class="fi">
+          <div class="tag">Contato</div>
+          <h2 class="sec-title">Vamos começar<br/>sua jornada?</h2>
+          <p>Preencha o formulário ou fale direto pelo WhatsApp. Respondemos em até 2 horas em dias úteis.</p>
+          <div class="ctt-items">
+            <div class="ctt-item">
+              <div class="ctt-ico"><i class="fab fa-whatsapp"></i></div>
+              <div><div class="ctt-tit">WhatsApp (preferencial)</div><div class="ctt-val">(00) 00000-0000</div></div>
+            </div>
+            <div class="ctt-item">
+              <div class="ctt-ico"><i class="fas fa-envelope"></i></div>
+              <div><div class="ctt-tit">E-mail</div><div class="ctt-val">contato@essenciamaterna.com.br</div></div>
+            </div>
+            <div class="ctt-item">
+              <div class="ctt-ico"><i class="fab fa-instagram"></i></div>
+              <div><div class="ctt-tit">Instagram</div><div class="ctt-val">@essenciamaterna</div></div>
+            </div>
+            <div class="ctt-item">
+              <div class="ctt-ico"><i class="fas fa-map-marker-alt"></i></div>
+              <div><div class="ctt-tit">Área de Atendimento</div><div class="ctt-val">[Sua Cidade] e região</div></div>
+            </div>
+          </div>
+          <div style="margin-top:28px;">
+            <a href="https://wa.me/5500000000000" class="btn btn-wa">
+              <i class="fab fa-whatsapp"></i> Falar Agora no WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div class="form-card fi fi-d2">
+          <h3 class="form-ttl">Solicite seu Agendamento</h3>
+          <p class="form-sub">Preencha os dados e entraremos em contato para confirmar.</p>
+          <form onsubmit="handleForm(event)">
+            <div class="form-grid">
+              <div class="fg">
+                <label class="fl">Nome completo *</label>
+                <input type="text" placeholder="Seu nome completo" required />
+              </div>
+              <div class="fg">
+                <label class="fl">WhatsApp *</label>
+                <input type="tel" placeholder="(00) 00000-0000" required />
+              </div>
+              <div class="fg">
+                <label class="fl">E-mail</label>
+                <input type="email" placeholder="seu@email.com" />
+              </div>
+              <div class="fg">
+                <label class="fl">Bebê tem quantos dias/meses?</label>
+                <input type="text" placeholder="Ex: 15 dias, 2 meses, ainda gestante..." />
+              </div>
+              <div class="fg full">
+                <label class="fl">Tipo de atendimento desejado *</label>
+                <select required>
+                  <option value="">Selecione uma opção...</option>
+                  <option>Consulta Online — R$ 280</option>
+                  <option>Atendimento Domiciliar — R$ 450</option>
+                  <option>Domiciliar + Laserterapia — R$ 590</option>
+                  <option>Pacote Ouro (3 sessões + laser) — R$ 1.490</option>
+                  <option>Consultoria Pré-Natal (gestante)</option>
+                  <option>Não sei ainda — quero orientação</option>
+                </select>
+              </div>
+              <div class="fg full">
+                <label class="fl">Conte um pouco sobre sua situação</label>
+                <textarea placeholder="Ex: estou com fissuras há 3 dias, meu bebê tem dificuldade de pegar no peito, estou com ingurgitamento..."></textarea>
+              </div>
+            </div>
+            <button type="submit" class="form-btn" id="form-btn">
+              <i class="fas fa-paper-plane"></i> Enviar Solicitação
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer>
+    <div class="container">
+      <div class="ft-grid">
+        <div>
+          <div class="ft-logo">
+            <span class="ft-logo-main">Essência Materna</span>
+            <span class="ft-logo-by">by Michelly Modos</span>
+          </div>
+          <p class="ft-desc">Consultoria especializada em amamentação com laserterapia mamilar, por Michelly Modos. Atendimento humanizado, baseado em evidências, para que você e seu bebê vivam essa jornada com amor e leveza.</p>
+          <div class="ft-soc">
+            <a href="#" class="ft-si"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="ft-si"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="ft-si"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="ft-si"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="ft-si"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div>
+          <div class="ft-ht">Navegação</div>
+          <ul class="ft-links">
+            <li><a href="#como-funciona">Como Funciona</a></li>
+            <li><a href="#tratamentos">Tratamentos</a></li>
+            <li><a href="#laser">Laserterapia</a></li>
+            <li><a href="#sobre">Sobre a Consultora</a></li>
+            <li><a href="#valores">Valores</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="ft-ht">Serviços</div>
+          <ul class="ft-links">
+            <li><a href="#contato">Consulta Online</a></li>
+            <li><a href="#contato">Atendimento Domiciliar</a></li>
+            <li><a href="#contato">Laserterapia Mamilar</a></li>
+            <li><a href="#contato">Pacote Ouro</a></li>
+            <li><a href="#contato">Consultoria Pré-Natal</a></li>
+            <li><a href="#contato">Desmame Gradual</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="ft-ht">Contato</div>
+          <ul class="ft-links">
+            <li><a href="#">(00) 00000-0000</a></li>
+            <li><a href="#">contato@essenciamaterna.com.br</a></li>
+            <li><a href="#">@essenciamaterna</a></li>
+            <li><a href="#">[Sua Cidade] e região</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="ft-bot">
+        <span>© 2025 Essência Materna by Michelly Modos. Todos os direitos reservados.</span>
+        <span>Desenvolvido com ♥ para mães e bebês</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flutuante -->
+  <a href="https://wa.me/5500000000000" class="wa-float" target="_blank" title="Falar no WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script>
+    /* NAV scroll */
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => nav.classList.toggle('on', scrollY > 50));
+
+    /* Fade-in observer */
+    new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
+    }, { threshold: 0.1 }).observe && document.querySelectorAll('.fi').forEach(el =>
+      new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
+      }, { threshold: 0.1 }).observe(el)
+    );
+
+    /* Mobile nav */
+    function toggleNav() {
+      const ul = document.querySelector('.nav-links');
+      const nr = document.querySelector('.nav-right');
+      const open = ul.style.display === 'flex';
+      const style = open ? '' : `
+        display:flex;flex-direction:column;position:fixed;top:66px;left:0;right:0;
+        background:rgba(253,248,243,.97);backdrop-filter:blur(20px);
+        padding:28px;gap:22px;box-shadow:0 8px 32px rgba(0,0,0,.08);z-index:998;
+      `;
+      ul.style.cssText = style;
+      if (nr) nr.style.cssText = open ? '' : `
+        display:flex;position:fixed;bottom:0;left:0;right:0;padding:16px 28px;
+        background:#fff;box-shadow:0 -4px 16px rgba(0,0,0,.06);z-index:998;gap:12px;
+      `;
+    }
+
+    /* Form submit */
+    function handleForm(e) {
+      e.preventDefault();
+      const btn = document.getElementById('form-btn');
+      btn.innerHTML = '<i class="fas fa-check"></i> Enviado! Entraremos em contato em breve.';
+      btn.style.background = 'linear-gradient(135deg,#25D366,#128C7E)';
+      setTimeout(() => {
+        btn.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar Solicitação';
+        btn.style.background = '';
+        e.target.reset();
+      }, 5000);
+    }
+
+    /* Smooth scroll */
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const t = document.querySelector(a.getAttribute('href'));
+        if (t) { e.preventDefault(); t.scrollIntoView({ behavior:'smooth', block:'start' }); }
+      });
+    });
+  </script>
+</body>
+</html>
